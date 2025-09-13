@@ -1,5 +1,6 @@
-from typing import List
 from __future__ import annotations
+
+from typing import List
 from pydantic import BaseModel, Field
 from .course import Course
 
@@ -20,7 +21,9 @@ class Student(BaseModel):
               "department": "Computer Science",
               "instructor": "John",
               "capacity": 240,
-              "classroom":"BBB136"
+              "classroom":"BBB136",
+              "id":12345,
+
                 }
             ]
         },
@@ -42,8 +45,8 @@ class Student(BaseModel):
                         "department": "Computer Science",
                         "instructor": "John",
                         "capacity": 240,
-                        "classroom":"BBB136"
-
+                        "classroom":"BBB136",
+                        "id":12345,
                         }
                     ],
                 }

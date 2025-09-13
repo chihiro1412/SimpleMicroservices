@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from pydantic import BaseModel, Field
 
 class Course(BaseModel):
@@ -7,6 +8,7 @@ class Course(BaseModel):
     instructor: str = Field(description="prof who teached the class")
     capacity: int = Field(description="max number of students can enroll")
     classroom: str = Field(description="class room of the course")
+    id : int = Field(description="identifier of class, 5 digit")
 
     model_config = {
         "json_schema_extra": {
@@ -15,8 +17,8 @@ class Course(BaseModel):
               "department": "Computer Science",
               "instructor": "John",
               "capacity": 240,
-              "classroom":"BBB136"
-
+              "classroom":"BBB136",
+              "id": 12837
             }
         }
     }

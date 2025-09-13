@@ -14,6 +14,9 @@ from typing import Optional
 from models.person import PersonCreate, PersonRead, PersonUpdate
 from models.address import AddressCreate, AddressRead, AddressUpdate
 from models.health import Health
+from models.course import Course
+from models.student import Student
+
 
 port = int(os.environ.get("FASTAPIPORT", 8000))
 
@@ -28,6 +31,66 @@ app = FastAPI(
     description="Demo FastAPI app using Pydantic v2 models for Person and Address",
     version="0.1.0",
 )
+
+
+# -----------------------------------------------------------------------------
+# Student endpoints
+# -----------------------------------------------------------------------------
+
+@app.get("/students",)
+def get_student():
+    
+    raise HTTPException(status_code=501, detail="get_student is not implemented yet")
+
+
+@app.post("/students",)
+def post_student():
+    
+    raise HTTPException(status_code=501, detail="post_student is not implemented yet")
+
+@app.get("/students/{id}",)
+def get_student_with_id(id:int):
+    
+    raise HTTPException(status_code=501, detail="get_student_with_id is not implemented yet")
+
+@app.put("/students/{id}",)
+def put_student_with_id(student_id:int):
+    
+    raise HTTPException(status_code=501, detail="put_student_with_id is not implemented yet")
+
+@app.delete("/students/{id}",)
+def delete_student(student_id:int):
+
+    raise HTTPException(status_code=501, detail=" delete_student is not implemented yet")
+# -----------------------------------------------------------------------------
+# Course endpoints
+# -----------------------------------------------------------------------------
+@app.get("/course",)
+def get_course():
+    
+    raise HTTPException(status_code=501, detail="get_course is not implemented yet")
+
+
+@app.post("/course",)
+def post_course():
+    
+    raise HTTPException(status_code=501, detail="post_courset is not implemented yet")
+
+@app.get("/course/{id}",)
+def get_course_with_id(id:int):
+    
+    raise HTTPException(status_code=501, detail="get_course_with_id is not implemented yet")
+
+@app.put("/course/{id}",)
+def put_course_with_id(id:int):
+    
+    raise HTTPException(status_code=501, detail="put_course_with_id is not implemented yet")
+
+@app.delete("/course/{id}",)
+def delete_course(id:int):
+
+    raise HTTPException(status_code=501, detail=" delete_course is not implemented yet")
+
 
 # -----------------------------------------------------------------------------
 # Address endpoints
@@ -165,7 +228,7 @@ def update_person(person_id: UUID, update: PersonUpdate):
 @app.get("/")
 def root():
     return {"message": "Welcome to the Person/Address API. See /docs for OpenAPI UI."}
-
+   
 # -----------------------------------------------------------------------------
 # Entrypoint for `python main.py`
 # -----------------------------------------------------------------------------
